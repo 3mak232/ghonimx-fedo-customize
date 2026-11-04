@@ -1,0 +1,14 @@
+{
+  "name": "fedo-factory-tests",
+  "private": true,
+  "version": "5.0.0",
+  "description": "Local QA harness for FEDO Factory (SQL + headless UI smoke). Disposable databases only.",
+  "scripts": {
+    "ui": "node factory_ui_smoke_test.js",
+    "race": "python3 factory_roll_v5_race_test.py",
+    "all": "./run_all_local.sh"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}

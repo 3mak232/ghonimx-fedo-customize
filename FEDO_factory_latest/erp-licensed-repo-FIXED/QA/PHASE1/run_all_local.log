@@ -1,0 +1,45 @@
+
+== إعادة إنشاء قاعدة الاختبار: fedo_factory_test
+
+== 1) shim + قاعدة FEDO الأساسية
+   PASS  migration supabase_shim.sql
+   PASS  migration ERP_BASE_CURRENT.sql
+
+== 2) تخصيص المصنع v1 → v5 (كل ملف مرتين لإثبات idempotency)
+   PASS  migration ERP_FACTORY_CUSTOMIZE_v1.sql
+   PASS  migration ERP_FACTORY_CUSTOMIZE_v1.sql
+   PASS  migration ERP_FACTORY_FIX_MANUAL_JOURNAL_v2.sql
+   PASS  migration ERP_FACTORY_FIX_MANUAL_JOURNAL_v2.sql
+   PASS  migration ERP_FACTORY_SMOKE_RETURN_TAX_v3.sql
+   PASS  migration ERP_FACTORY_SMOKE_RETURN_TAX_v3.sql
+   PASS  migration ERP_FACTORY_ROLL_LEDGER_v4.sql
+   PASS  migration ERP_FACTORY_ROLL_LEDGER_v4.sql
+   PASS  migration ERP_FACTORY_ROLL_LEDGER_v5.sql
+   PASS  migration ERP_FACTORY_ROLL_LEDGER_v5.sql
+
+== 3) lockdown
+   PASS  migration 99_final_lockdown.sql
+
+== 4) اختبارات SQL (كلها تتراجع عن بياناتها)
+   PASS  factory_manual_journal_fix_test.sql
+   PASS  factory_tax_return_test.sql
+   PASS  factory_foundation.sql
+   PASS  factory_legacy_flows.sql
+   PASS  factory_roll_ledger_test.sql
+   PASS  factory_roll_ledger_v5_test.sql
+   PASS  factory_legacy_smoke.sql
+
+== 5) فحص الأمان النهائي
+   PASS  lockdown 0/0/0
+
+== 6) اختبار التزامن (جلستان على نفس الرول) — قاعدة منفصلة تُحذف بعدها
+   PASS  PASS two concurrent work orders on one roll: one issue of 30 succeeds, the other is rejected, roll remaining and FEDO stock both 10, single ledger row with 30 consumed
+
+== 7) صحة JS + اختبار الواجهة (jsdom)
+   PASS  ALL 28 UI CHECKS PASSED
+   PASS  node --check 03-frontend/app.js
+   PASS  node --check 03-frontend/sw.js
+
+== القاعدة محفوظة: fedo_factory_test
+
+ALL LOCAL CHECKS PASSED
