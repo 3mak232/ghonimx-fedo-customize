@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.
+!.env.example
+!.env.template
+.pem
+.key
+id_rsa
+id_ed25519
+
+# Dependencies
+node_modules
+dist
+build
+coverage
+
+# Local database and backups
+.dump
+.backup
+.bak
+.sqlite
+.sqlite3
+
+# Temporary files
+.tmp
+.DS_Store
+Thumbs.db
