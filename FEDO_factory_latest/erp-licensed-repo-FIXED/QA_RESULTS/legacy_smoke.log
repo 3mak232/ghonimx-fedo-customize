@@ -1,0 +1,17 @@
+BEGIN
+INSERT 0 1
+UPDATE 1
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ 90000000-0000-4000-8000-000000000001
+(1 row)
+
+SET
+psql:erp-kit/05-tests/factory_legacy_smoke.sql:14: NOTICE:  smoke_result: {"ok": false, "tag": "__ERP_TEST__3731d15cae", "cleaned": true, "results": [{"pass": true, "test": "purchase creates stock", "actual": 10.000, "expected": 10}, {"tax": 63.00, "pass": true, "test": "sale + VAT + initial payment", "stock": 7.000, "total": 513.00, "outstanding": 413.00}, {"pass": true, "test": "payment allocation", "expected": 363, "outstanding": 363.00}, {"pass": true, "test": "over-allocation rejected"}, {"pass": false, "test": "sales return + customer balance", "stock": 8.000, "customer_balance": 192.00}, {"pass": true, "test": "purchase return + supplier balance", "stock": 6.000, "supplier_balance": 912.00}, {"pass": true, "test": "stock transfer", "to_qty": 2.000, "from_qty": 4.000}, {"qty": 4.000, "pass": true, "test": "stocktake", "expected": 4}, {"pass": true, "test": "manual journal balanced", "debit": 25.00, "credit": 25.00}, {"pass": true, "rows": 1, "test": "customer aging callable"}, {"pass": true, "rows": 1, "test": "supplier aging callable"}, {"pass": true, "test": "journal globally balanced after rebuild", "debit": 2627.00, "credit": 2627.00}, {"pass": true, "test": "dashboard callable"}]}
+psql:erp-kit/05-tests/factory_legacy_smoke.sql:14: ERROR:  FEDO smoke test returned ok=false; inspect smoke_result
+CONTEXT:  PL/pgSQL function inline_code_block line 5 at RAISE

@@ -1,0 +1,21 @@
+BEGIN
+INSERT 0 1
+UPDATE 1
+UPDATE 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ 93000000-0000-4000-8000-000000000001
+(1 row)
+
+SET
+psql:erp-kit/05-tests/factory_tax_return_test.sql:35: NOTICE:  PASS VAT return 150+21=171; customer 363->192; journal Dr revenue 150 VAT 21 inventory 100 / Cr AR 171 COGS 100; rebuild identical
+DO
+ROLLBACK

@@ -1,0 +1,45 @@
+/* =========================================================
+   FEDO ERP — comptest4 palette (Navy · Teal · Cream), light + dark.
+   Loaded after theme.css. Same token names as theme.css.
+   Buttons: #0B7A5E in light (white text AA); #0E8F6C in dark.
+   ========================================================= */
+:root{
+  --navy:#101C2C; --navy-2:#17263A; --navy-3:#1F3148; --on:#101C2C;
+  --bg:#F4F2EB; --card:#FFFFFF; --surface-2:#F3F1E8; --line:#E3E0D4; --line-2:#D6D2C4;
+  --ink:#101C2C; --ink-2:#3A4657; --muted:#5B6878; --fg:#101C2C;
+  --blue:#0B7A5E; --blue2:#095F4A; --teal:#18B58B; --tint:#E6F5F0; --tint-2:#CDEBDD;
+  --green:#16834B; --green-bg:#E7F6EC; --red:#B93A2F; --red-bg:#FBE4E0;
+  --orange:#B8650F; --orange-bg:#FDF6E9; --purple:#0E6E8C; --danger-bg:#FBE4E0;
+  --side-ink:#E8EEF5; --side-muted:#8C9AAE; --side-line:rgba(255,255,255,.08);
+  --shadow-1:0 1px 2px rgba(16,28,44,.05);
+  --shadow-2:0 1px 2px rgba(16,28,44,.04),0 12px 28px -16px rgba(16,28,44,.18);
+  --ring:0 0 0 4px rgba(11,122,94,.16);
+  --btn:#0B7A5E;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --navy:#070E1A; --navy-2:#0C1726; --navy-3:#13223A; --on:#0A8068;
+    --bg:#0B1220; --card:#121C2E; --surface-2:#17243A; --line:#22324D; --line-2:#2E4163;
+    --ink:#E8EEF5; --ink-2:#C5D0DE; --muted:#8C9AAE; --fg:#E8EEF5;
+    --blue:#0A8068; --blue2:#5FD3B0; --teal:#5FD3B0; --tint:rgba(24,181,139,.14); --tint-2:rgba(24,181,139,.26);
+    --green:#34D399; --green-bg:rgba(52,211,153,.12); --red:#F87171; --red-bg:rgba(248,113,113,.12);
+    --orange:#FBBF24; --orange-bg:rgba(251,191,36,.12); --purple:#67C5E0; --danger-bg:rgba(248,113,113,.12);
+    --side-ink:#E8EEF5; --side-muted:#8C9AAE; --side-line:rgba(255,255,255,.07);
+    --shadow-1:0 1px 2px rgba(0,0,0,.4); --shadow-2:0 16px 34px -18px rgba(0,0,0,.7);
+    --ring:0 0 0 4px rgba(24,181,139,.22); --btn:#0A8068;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --navy:#070E1A; --navy-2:#0C1726; --navy-3:#13223A; --on:#0A8068;
+  --bg:#0B1220; --card:#121C2E; --surface-2:#17243A; --line:#22324D; --line-2:#2E4163;
+  --ink:#E8EEF5; --ink-2:#C5D0DE; --muted:#8C9AAE; --fg:#E8EEF5;
+  --blue:#0A8068; --blue2:#5FD3B0; --teal:#5FD3B0; --tint:rgba(24,181,139,.14); --tint-2:rgba(24,181,139,.26);
+  --green:#34D399; --green-bg:rgba(52,211,153,.12); --red:#F87171; --red-bg:rgba(248,113,113,.12);
+  --orange:#FBBF24; --orange-bg:rgba(251,191,36,.12); --purple:#67C5E0; --danger-bg:rgba(248,113,113,.12);
+  --side-ink:#E8EEF5; --side-muted:#8C9AAE; --side-line:rgba(255,255,255,.07);
+  --shadow-1:0 1px 2px rgba(0,0,0,.4); --shadow-2:0 16px 34px -18px rgba(0,0,0,.7);
+  --ring:0 0 0 4px rgba(24,181,139,.22); --btn:#0A8068;
+  color-scheme:dark;
+}

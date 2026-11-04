@@ -1,0 +1,1432 @@
+DO
+psql:erp-kit/07-local-test/supabase_shim.sql:4: NOTICE:  role "postgres" has already been granted membership in role "anon" by role "postgres"
+psql:erp-kit/07-local-test/supabase_shim.sql:4: NOTICE:  role "postgres" has already been granted membership in role "authenticated" by role "postgres"
+psql:erp-kit/07-local-test/supabase_shim.sql:4: NOTICE:  role "postgres" has already been granted membership in role "service_role" by role "postgres"
+GRANT ROLE
+CREATE SCHEMA
+GRANT
+CREATE TABLE
+CREATE TABLE
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+GRANT
+CREATE SCHEMA
+GRANT
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE EXTENSION
+psql:erp-kit/07-local-test/supabase_shim.sql:21: WARNING:  "wal_level" is insufficient to publish logical changes
+HINT:  Set "wal_level" to "logical" before creating subscriptions.
+DO
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:19: NOTICE:  extension "pgcrypto" already exists, skipping
+CREATE EXTENSION
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 9
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+DO
+CREATE FUNCTION
+CREATE TRIGGER
+DO
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE FUNCTION
+ w | w | w | w | w | w | w | w | w | w | w | w 
+---+---+---+---+---+---+---+---+---+---+---+---
+   |   |   |   |   |   |   |   |   |   |   | 
+(1 row)
+
+DROP FUNCTION
+REVOKE
+REVOKE
+GRANT
+GRANT
+GRANT
+REVOKE
+DROP POLICY
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE FUNCTION
+REVOKE
+GRANT
+INSERT 0 1
+INSERT 0 3
+INSERT 0 7
+CREATE FUNCTION
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+DO
+CREATE VIEW
+CREATE VIEW
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+BEGIN
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:423: NOTICE:  column "tax" of relation "purchase_invoices" already exists, skipping
+ALTER TABLE
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+DO
+ALTER TABLE
+CREATE INDEX
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:444: NOTICE:  column "factor" of relation "units" already exists, skipping
+ALTER TABLE
+DO
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+INSERT 0 4
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:492: NOTICE:  policy "sel_payment_allocations" for relation "payment_allocations" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+REVOKE
+CREATE VIEW
+CREATE VIEW
+CREATE FUNCTION
+CREATE FUNCTION
+INSERT 0 0
+INSERT 0 0
+UPDATE 0
+UPDATE 0
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:590: NOTICE:  policy "sel_stock_transfers" for relation "stock_transfers" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:591: NOTICE:  policy "sel_stock_transfer_items" for relation "stock_transfer_items" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+REVOKE
+CREATE SEQUENCE
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:648: NOTICE:  policy "sel_stocktakes" for relation "stocktakes" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:649: NOTICE:  policy "sel_stocktake_items" for relation "stocktake_items" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+REVOKE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+DROP FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:732: NOTICE:  function record_payment(text,uuid,pg_catalog.numeric,uuid,jsonb) does not exist, skipping
+DROP FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+COMMIT
+BEGIN
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE FUNCTION
+CREATE FUNCTION
+ALTER TABLE
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+COMMIT
+BEGIN
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+INSERT 0 1
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 1
+CREATE FUNCTION
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:1806: NOTICE:  trigger "period_guard_sales_invoices" for relation "sales_invoices" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:1806: NOTICE:  trigger "period_guard_purchase_invoices" for relation "purchase_invoices" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:1806: NOTICE:  trigger "period_guard_payments" for relation "payments" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:1806: NOTICE:  trigger "period_guard_expenses" for relation "expenses" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:1806: NOTICE:  trigger "period_guard_journal_entries" for relation "journal_entries" does not exist, skipping
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:1851: NOTICE:  column "branch_id" of relation "purchase_orders" already exists, skipping
+ALTER TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE SEQUENCE
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+INSERT 0 7
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE SEQUENCE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE SEQUENCE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE SEQUENCE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2348: NOTICE:  policy "upd_notifications_self" for relation "notifications" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+DO
+DO
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_branches" for relation "branches" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_cost_centers" for relation "cost_centers" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_fiscal_periods" for relation "fiscal_periods" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_purchase_orders" for relation "purchase_orders" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_purchase_order_items" for relation "purchase_order_items" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_goods_receipts" for relation "goods_receipts" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_goods_receipt_items" for relation "goods_receipt_items" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_delivery_notes" for relation "delivery_notes" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_delivery_note_items" for relation "delivery_note_items" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_price_lists" for relation "price_lists" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_price_list_items" for relation "price_list_items" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_asset_categories" for relation "asset_categories" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_fixed_assets" for relation "fixed_assets" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_asset_depreciations" for relation "asset_depreciations" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_bank_statements" for relation "bank_statements" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_bank_statement_lines" for relation "bank_statement_lines" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_shifts" for relation "shifts" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_attendance" for relation "attendance" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_leave_types" for relation "leave_types" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_leave_requests" for relation "leave_requests" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_boms" for relation "boms" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_bom_items" for relation "bom_items" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_work_orders" for relation "work_orders" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_pos_sessions" for relation "pos_sessions" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_pos_session_sales" for relation "pos_session_sales" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_projects" for relation "projects" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_service_tickets" for relation "service_tickets" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_approval_requests" for relation "approval_requests" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2715: NOTICE:  trigger "audit_notifications" for relation "notifications" does not exist, skipping
+DO
+REVOKE
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+GRANT
+GRANT
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:2956: NOTICE:  relation "products_barcode_unique_idx" already exists, skipping
+CREATE INDEX
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_opening_balance_runs" for relation "opening_balance_runs" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_product_barcodes" for relation "product_barcodes" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_commission_rules" for relation "commission_rules" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_sales_commissions" for relation "sales_commissions" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_cheques" for relation "cheques" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_tax_documents" for relation "tax_documents" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_integration_connections" for relation "integration_connections" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3151: NOTICE:  trigger "audit_integration_events" for relation "integration_events" does not exist, skipping
+DO
+DO
+GRANT
+GRANT
+CREATE FUNCTION
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3278: NOTICE:  column "track_batch" of relation "products" already exists, skipping
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3279: NOTICE:  column "track_serial" of relation "products" already exists, skipping
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3280: NOTICE:  column "track_expiry" of relation "products" already exists, skipping
+ALTER TABLE
+CREATE FUNCTION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE VIEW
+CREATE VIEW
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+GRANT
+GRANT
+CREATE FUNCTION
+GRANT
+COMMIT
+BEGIN
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3726: NOTICE:  trigger "protect_cash_balance" for relation "cash_accounts" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3752: NOTICE:  trigger "protect_payroll_paid" for relation "payroll" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+REVOKE
+COMMIT
+BEGIN
+CREATE FUNCTION
+GRANT
+COMMIT
+BEGIN
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:3836: NOTICE:  function public._rebuild_journal() does not exist, skipping
+DROP FUNCTION
+CREATE FUNCTION
+REVOKE
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4118: NOTICE:  trigger "jr_auto" for relation "sales_invoices" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4119: NOTICE:  trigger "jr_inc" for relation "sales_invoices" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4121: NOTICE:  trigger "jr_auto" for relation "sales_invoice_items" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4122: NOTICE:  trigger "jr_inc" for relation "sales_invoice_items" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4124: NOTICE:  trigger "jr_auto" for relation "purchase_invoices" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4125: NOTICE:  trigger "jr_inc" for relation "purchase_invoices" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4127: NOTICE:  trigger "jr_auto" for relation "purchase_invoice_items" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4128: NOTICE:  trigger "jr_inc" for relation "purchase_invoice_items" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4130: NOTICE:  trigger "jr_auto" for relation "payments" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4131: NOTICE:  trigger "jr_inc" for relation "payments" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4133: NOTICE:  trigger "jr_auto" for relation "expenses" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4134: NOTICE:  trigger "jr_inc" for relation "expenses" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4136: NOTICE:  trigger "jr_auto" for relation "sales_returns" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4137: NOTICE:  trigger "jr_inc" for relation "sales_returns" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4139: NOTICE:  trigger "jr_auto" for relation "sales_return_items" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4140: NOTICE:  trigger "jr_inc" for relation "sales_return_items" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4142: NOTICE:  trigger "jr_auto" for relation "purchase_returns" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4143: NOTICE:  trigger "jr_inc" for relation "purchase_returns" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4145: NOTICE:  trigger "jr_auto" for relation "purchase_return_items" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4146: NOTICE:  trigger "jr_inc" for relation "purchase_return_items" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4149: NOTICE:  trigger "jr_auto" for relation "stock_movements" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4150: NOTICE:  trigger "jr_stock_ins" for relation "stock_movements" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4150: NOTICE:  trigger "jr_stock_upd" for relation "stock_movements" does not exist, skipping
+DROP TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:4150: NOTICE:  trigger "jr_stock_del" for relation "stock_movements" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+ _rebuild_journal 
+------------------
+                0
+(1 row)
+
+COMMIT
+BEGIN
+CREATE FUNCTION
+GRANT
+COMMIT
+BEGIN
+CREATE FUNCTION
+GRANT
+COMMIT
+BEGIN
+CREATE FUNCTION
+CREATE FUNCTION
+DO
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+REVOKE
+GRANT
+GRANT
+CREATE FUNCTION
+GRANT
+COMMIT
+BEGIN
+REVOKE
+REVOKE
+REVOKE
+ALTER DEFAULT PRIVILEGES
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+DO
+CREATE FUNCTION
+GRANT
+GRANT
+GRANT
+COMMIT
+BEGIN
+GRANT
+DO
+COMMIT
+BEGIN
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5057: NOTICE:  policy "sel_holidays" for relation "public.holidays" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5059: NOTICE:  policy "write_holidays" for relation "public.holidays" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5062: NOTICE:  policy "sel_employee_adjustments" for relation "public.employee_adjustments" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5064: NOTICE:  policy "write_employee_adjustments" for relation "public.employee_adjustments" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+REVOKE
+GRANT
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+DO
+GRANT
+COMMIT
+BEGIN
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+ALTER TABLE
+DO
+CREATE TABLE
+CREATE INDEX
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5217: NOTICE:  policy "user_permissions_select" for relation "user_permissions" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5222: NOTICE:  policy "user_permissions_insert" for relation "user_permissions" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5227: NOTICE:  policy "user_permissions_update" for relation "user_permissions" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5233: NOTICE:  policy "user_permissions_delete" for relation "user_permissions" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+REVOKE
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+REVOKE
+REVOKE
+REVOKE
+GRANT
+GRANT
+GRANT
+GRANT
+COMMIT
+BEGIN
+GRANT
+COMMIT
+BEGIN
+DO
+COMMIT
+BEGIN
+DO
+COMMIT
+BEGIN
+DO
+GRANT
+COMMIT
+BEGIN
+GRANT
+COMMIT
+BEGIN
+ALTER TABLE
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5450: NOTICE:  trigger "protect_developer" for relation "profiles" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+REVOKE
+REVOKE
+GRANT
+COMMIT
+CREATE TABLE
+ALTER TABLE
+REVOKE
+GRANT
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5467: NOTICE:  policy "qa_own" for relation "user_quick_actions" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+GRANT
+GRANT
+GRANT
+GRANT
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+BEGIN
+ALTER TABLE
+CREATE TABLE
+CREATE INDEX
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5507: NOTICE:  policy "sel_cash_movements" for relation "cash_movements" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5578: NOTICE:  policy "write_employees" for relation "employees" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+GRANT
+CREATE FUNCTION
+COMMIT
+BEGIN
+CREATE FUNCTION
+DO
+COMMIT
+BEGIN
+CREATE FUNCTION
+REVOKE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5701: NOTICE:  trigger "sales_discount_cap" for relation "sales_invoices" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+GRANT
+COMMIT
+BEGIN
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5730: NOTICE:  constraint "company_settings_sales_discount_max_pct_check" of relation "company_settings" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+CREATE FUNCTION
+REVOKE
+COMMIT
+BEGIN
+REVOKE
+GRANT
+ALTER DEFAULT PRIVILEGES
+REVOKE
+REVOKE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5766: NOTICE:  column "logo_url" of relation "company_settings" already exists, skipping
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5779: NOTICE:  policy "company_assets_insert" for relation "storage.objects" does not exist, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5779: NOTICE:  policy "company_assets_update" for relation "storage.objects" does not exist, skipping
+DO
+COMMIT
+BEGIN
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+DO
+CREATE INDEX
+CREATE INDEX
+DO
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5849: NOTICE:  trigger "party_sync" for relation "parties" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5862: NOTICE:  trigger "role_from_party" for relation "customers" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5864: NOTICE:  trigger "role_from_party" for relation "suppliers" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+REVOKE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5870: NOTICE:  policy "sel_parties" for relation "parties" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:5871: NOTICE:  policy "write_parties" for relation "parties" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+GRANT
+CREATE VIEW
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+INSERT 0 0
+INSERT 0 0
+CREATE FUNCTION
+CREATE TABLE
+INSERT 0 1
+ALTER TABLE
+REVOKE
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+GRANT
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6058: NOTICE:  policy "sel_own_attendance" for relation "attendance" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+INSERT 0 1
+DROP POLICY
+CREATE POLICY
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6112: NOTICE:  policy "company_assets_delete" for relation "storage.objects" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+COMMIT
+BEGIN
+ALTER TABLE
+DROP POLICY
+CREATE POLICY
+CREATE FUNCTION
+COMMIT
+BEGIN
+REVOKE
+ALTER DEFAULT PRIVILEGES
+COMMIT
+BEGIN
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+GRANT
+COMMIT
+BEGIN
+DO
+CREATE INDEX
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+DROP FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+COMMIT
+BEGIN
+DO
+COMMIT
+DROP FUNCTION
+BEGIN
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6380: NOTICE:  relation "parties" already exists, skipping
+CREATE TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6382: NOTICE:  column "party_id" of relation "customers" already exists, skipping
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6383: NOTICE:  column "party_id" of relation "suppliers" already exists, skipping
+ALTER TABLE
+DO
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6393: NOTICE:  relation "customers_one_party" already exists, skipping
+CREATE INDEX
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6394: NOTICE:  relation "suppliers_one_party" already exists, skipping
+CREATE INDEX
+DO
+CREATE FUNCTION
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+DROP TRIGGER
+CREATE TRIGGER
+DROP TRIGGER
+CREATE TRIGGER
+REVOKE
+ALTER TABLE
+DROP POLICY
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+GRANT
+CREATE VIEW
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+INSERT 0 0
+INSERT 0 0
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6614: NOTICE:  relation "app_control" already exists, skipping
+CREATE TABLE
+INSERT 0 0
+ALTER TABLE
+REVOKE
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+GRANT
+DROP POLICY
+CREATE POLICY
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+INSERT 0 1
+DROP POLICY
+CREATE POLICY
+DROP POLICY
+CREATE POLICY
+DROP POLICY
+CREATE POLICY
+COMMIT
+BEGIN
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6706: NOTICE:  column "print_settings" of relation "company_settings" already exists, skipping
+ALTER TABLE
+DROP POLICY
+CREATE POLICY
+CREATE FUNCTION
+COMMIT
+BEGIN
+REVOKE
+ALTER DEFAULT PRIVILEGES
+COMMIT
+BEGIN
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6777: NOTICE:  column "locked" of relation "app_control" already exists, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6777: NOTICE:  column "lock_msg" of relation "app_control" already exists, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6777: NOTICE:  column "sessions_after" of relation "app_control" already exists, skipping
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+GRANT
+COMMIT
+BEGIN
+DO
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6838: NOTICE:  relation "one_developer_only" already exists, skipping
+CREATE INDEX
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6843: NOTICE:  column "lock_roles" of relation "app_control" already exists, skipping
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6843: NOTICE:  column "lock_until" of relation "app_control" already exists, skipping
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+DROP FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+COMMIT
+BEGIN
+DO
+COMMIT
+BEGIN
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6939: NOTICE:  constraint "profiles_phone_format" of relation "profiles" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6943: NOTICE:  constraint "profiles_username_format" of relation "profiles" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+CREATE TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:6995: NOTICE:  policy "rdp_select" for relation "role_default_perms" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+INSERT 0 56
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7118: NOTICE:  permission checks added: 14
+DO
+COMMIT
+BEGIN
+ALTER TABLE
+CREATE FUNCTION
+COMMIT
+BEGIN
+ALTER TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE FUNCTION
+ _tmp_repl_numbering 
+---------------------
+                   1
+(1 row)
+
+ _tmp_repl_numbering 
+---------------------
+                   1
+(1 row)
+
+ _tmp_repl_numbering 
+---------------------
+                   1
+(1 row)
+
+ _tmp_repl_numbering 
+---------------------
+                   1
+(1 row)
+
+ _tmp_repl_numbering 
+---------------------
+                   1
+(1 row)
+
+ _tmp_repl_numbering 
+---------------------
+                   1
+(1 row)
+
+DROP FUNCTION
+CREATE TABLE
+ALTER TABLE
+REVOKE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7285: NOTICE:  trigger "trg_trusted_devices_pw" for relation "auth.users" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+BEGIN
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+COMMIT
+CREATE TABLE
+ALTER TABLE
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7350: NOTICE:  policy "budgets_select" for relation "public.budgets" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7351: NOTICE:  policy "budgets_insert" for relation "public.budgets" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7352: NOTICE:  policy "budgets_update" for relation "public.budgets" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7353: NOTICE:  policy "budgets_delete" for relation "public.budgets" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+GRANT
+INSERT 0 3
+CREATE TABLE
+INSERT 0 1
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+GRANT
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7446: NOTICE:  policy "sel_shareholder_settings" for relation "shareholder_settings" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7447: NOTICE:  policy "sel_shareholders" for relation "shareholders" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7448: NOTICE:  policy "sel_shareholder_movements" for relation "shareholder_movements" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7449: NOTICE:  policy "sel_shareholder_profit_runs" for relation "shareholder_profit_runs" does not exist, skipping
+DROP POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7450: NOTICE:  policy "sel_shareholder_change_requests" for relation "shareholder_change_requests" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7695: NOTICE:  trigger "guard_shareholder_approval" for relation "approval_requests" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+CREATE FUNCTION
+REVOKE
+GRANT
+BEGIN
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+COMMIT
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7808: NOTICE:  column "app_version" of relation "app_control" already exists, skipping
+ALTER TABLE
+DO
+CREATE FUNCTION
+REVOKE
+GRANT
+DROP FUNCTION
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7835: NOTICE:  policy "write_parties" for relation "public.parties" does not exist, skipping
+DROP POLICY
+DROP POLICY
+DROP POLICY
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7848: NOTICE:  policy "write_fiscal_periods_admin" for relation "public.fiscal_periods" does not exist, skipping
+DROP POLICY
+DROP POLICY
+DROP POLICY
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_BASE_CURRENT.sql:7860: NOTICE:  policy "write_tax_documents" for relation "public.tax_documents" does not exist, skipping
+DROP POLICY
+DROP POLICY
+DROP POLICY
+DROP POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+DROP POLICY
+CREATE POLICY
+REVOKE
+GRANT
+BEGIN
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+GRANT
+psql:erp-kit/01-database/ERP_FACTORY_CUSTOMIZE_v1.sql:47: NOTICE:  policy "factory_variants_read" for relation "public.factory_variants" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_FACTORY_CUSTOMIZE_v1.sql:49: NOTICE:  policy "factory_batches_read" for relation "public.factory_roll_batches" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_FACTORY_CUSTOMIZE_v1.sql:51: NOTICE:  policy "factory_rolls_read" for relation "public.factory_rolls" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+REVOKE
+GRANT
+GRANT
+CREATE FUNCTION
+CREATE FUNCTION
+COMMIT
+BEGIN
+DO
+COMMIT
+BEGIN
+DO
+COMMIT
+BEGIN
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+GRANT
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:46: NOTICE:  policy "factory_roll_controls_read" for relation "public.factory_roll_controls" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:48: NOTICE:  policy "factory_roll_moves_read" for relation "public.factory_roll_moves" does not exist, skipping
+DROP POLICY
+CREATE POLICY
+CREATE VIEW
+REVOKE
+GRANT
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:74: NOTICE:  trigger "factory_roll_metadata_guard" for relation "public.factory_rolls" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:97: NOTICE:  trigger "factory_stock_balance_guard" for relation "public.stock_balances" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:109: NOTICE:  trigger "factory_roll_move_guard" for relation "public.factory_roll_moves" does not exist, skipping
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+REVOKE
+GRANT
+COMMIT
+BEGIN
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:12: NOTICE:  relation "factory_roll_controls" already exists, skipping
+CREATE TABLE
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:26: NOTICE:  relation "factory_roll_moves" already exists, skipping
+CREATE TABLE
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:27: NOTICE:  relation "factory_roll_one_receipt" already exists, skipping
+CREATE INDEX
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:28: NOTICE:  relation "factory_roll_moves_roll" already exists, skipping
+CREATE INDEX
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:33: NOTICE:  relation "factory_roll_pending_receipts" already exists, skipping
+CREATE TABLE
+psql:erp-kit/01-database/ERP_FACTORY_ROLL_LEDGER_v4.sql:37: NOTICE:  relation "factory_roll_purchase_requests" already exists, skipping
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+GRANT
+DROP POLICY
+CREATE POLICY
+DROP POLICY
+CREATE POLICY
+CREATE VIEW
+REVOKE
+GRANT
+CREATE FUNCTION
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE FUNCTION
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+DROP TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+REVOKE
+GRANT
+COMMIT
+REVOKE
+REVOKE
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+DO
+ anon_table_privileges | anon_unexpected_functions | tables_without_rls 
+-----------------------+---------------------------+--------------------
+                     0 |                         0 |                  0
+(1 row)
+

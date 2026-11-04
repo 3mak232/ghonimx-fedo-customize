@@ -1,0 +1,11 @@
+REVOKE
+REVOKE
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+DO
+ anon_table_privileges | anon_unexpected_functions | tables_without_rls 
+-----------------------+---------------------------+--------------------
+                     0 |                         0 |                  0
+(1 row)
+

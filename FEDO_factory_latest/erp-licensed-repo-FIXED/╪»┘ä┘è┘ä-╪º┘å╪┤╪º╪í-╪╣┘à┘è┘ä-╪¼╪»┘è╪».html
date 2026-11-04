@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دليل إنشاء قاعدة بيانات عميل جديد — خطوة بخطوة</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--tx:#14213d;--mut:#6b7280;--ac:#0f766e;--ac2:#115e59;--bd:#e5e1d8;--bad:#b91c1c;--warn:#b45309;--ok:#15803d}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.7 system-ui,"Segoe UI",Tahoma,sans-serif}
+header{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--bd);padding:12px 16px;z-index:10}
+header h1{margin:0;font-size:18px} header p{margin:4px 0 0;color:var(--mut);font-size:13px}
+.progress{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin:10px 0}
+.progress i{display:block;height:100%;background:var(--ac);width:0;transition:width .3s}
+.wrap{max-width:900px;margin:auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:14px 0}
+.card h2{margin:0 0 8px;font-size:16px;color:var(--ac2)}
+.card h3{margin:14px 0 6px;font-size:14px}
+.mut{color:var(--mut);font-size:13px}
+.step{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid var(--bd);border-radius:10px;margin:8px 0;background:#fff}
+.step input[type=checkbox]{width:20px;height:20px;margin-top:3px;accent-color:var(--ac)}
+.step b{font-size:14px} .step p{margin:4px 0 0;font-size:13px;color:#334155}
+.step.done{opacity:.6;background:#f0fdfa;border-color:#99f6e4}
+.code{font-family:ui-monospace,Consolas,monospace;background:#0f1b2d;color:#e2e8f0;padding:10px;border-radius:8px;word-break:break-all;font-size:13px;white-space:pre-wrap;direction:ltr;text-align:left}
+.copy{font-size:12px;border:1px solid var(--bd);background:#fff;border-radius:8px;padding:4px 8px;cursor:pointer}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--bd);border-radius:99px;padding:2px 8px;background:#fff}
+.warn{background:#fffbeb;border-color:#fde68a} .ok{background:#f0fdf4;border-color:#bbf7d0} .bad{background:#fef2f2;border-color:#fecaca}
+.btn{border:1px solid var(--bd);background:#fff;border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit}
+.btn.p{background:var(--ac);color:#fff;border-color:var(--ac)}
+.kbd{border:1px solid #cbd5e1;border-bottom-width:2px;background:#f8fafc;border-radius:6px;padding:1px 6px;font-size:12px}
+details{border:1px dashed var(--bd);border-radius:10px;padding:8px 10px;margin:8px 0;background:#fff}
+details summary{cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<header>
+  <h1>دليل إنشاء عميل جديد — ERP المرخص</h1>
+  <p>للمبتدئ تماماً — كل ضغطة مكتوبة. اللوحة المركزية عندك: <code>wqfbabtbqyioqumqjerc</code></p>
+  <div class="progress"><i id="bar"></i></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <span id="pct" class="mut">0% مكتمل</span>
+    <button class="btn" onclick="resetAll()">إعادة من الصفر</button>
+    <button class="btn" onclick="window.print()">طباعة / حفظ PDF</button>
+    <span class="tag">يعمل بدون باور شيل — كله من لوحة Supabase</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<div class="card ok">
+  <h2>قبل ما تبدأ — إيه ده؟</h2>
+  <p>عندك <b>لوحة تحكم</b> واحدة تتحكم في تراخيص كل العملاء. ولكل عميل <b>مشروع Supabase منفصل</b> فيه قاعدة بياناته وواجهته. الدليل ده ينشئ مشروع عميل جديد من الصفر.</p>
+  <p class="mut">الملف المُصلح الجاهز: <code>erp-licensed-repo-FIXED</code> — فيه كل الملفات التي ستنسخ منها.</p>
+</div>
+
+<!-- 0 -->
+<div class="card" data-section="0">
+  <h2>المرحلة 0 — حضّر المفاتيح (مرة واحدة)</h2>
+  <p class="mut">لو عملتها قبل كده تخطاها.</p>
+  <div class="step"><input type="checkbox" data-id="0-1"><div><b>افتح أداة توليد المفاتيح بدون Node</b><p>افتح الملف <span class="kbd">control-plane\03-tools\gen_keys.html</span> دبل كليك في المتصفح > اضغط <b>توليد المفاتيح الآن</b>. هيظهر سطرين انسخهم في Notepad:<br>— <code>LICENSE_PRIVATE_KEY</code> الطويل = للوحة فقط (لا يخرج منها)<br>— <code>LICENSE_PUBLIC_KEY</code> القصير = لكل العملاء</p></div></div>
+  <details><summary>فين أحفظهم؟</summary><p>الخاص احفظه في Password Manager + في لوحة <b>wqfbabtbqyioqumqjerc</b> فقط. العام ستضعه عند كل عميل في دالة <code>license-sync</code>. لو ضاع الخاص ستحتاج تغيّر العام عند كل عميل.</p></details>
+</div>
+
+<!-- 1 -->
+<div class="card" data-section="1">
+  <h2>المرحلة 1 — إنشاء مشروع Supabase جديد للعميل</h2>
+  <div class="step"><input type="checkbox" data-id="1-1"><div><b>ادخل supabase.com/dashboard</b><p>اضغط <span class="kbd">New project</span> > اختر Organization > اسم المشروع مثال <code>erp-client-acme</code> > اختر Region قريب من مصر (مثال Frankfurt) > ضع Password قوي > <span class="kbd">Create new project</span> وانتظر دقيقة حتى يجهز.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="1-2"><div><b>انسخ بيانات المشروع</b><p>من القائمة اليسار <span class="kbd">Project Settings</span> > <span class="kbd">General</span> انسخ <b>Reference ID</b>. ثم <span class="kbd">API Keys</span> انسخ <b>URL</b> (مثال <code>https://xxxx.supabase.co</code>) و <b>publishable key</b> (<code>sb_publishable_...</code>) و اضغط <span class="kbd">Reveal</span> وانسخ <b>Secret key</b> (<code>sb_secret_...</code> = هذا هو <code>ADMIN_SECRET_KEY</code>).</p></div></div>
+  <p class="mut">ستحتاج الـ URL والـ publishable للواجهة، والـ Secret للدوال.</p>
+</div>
+
+<!-- 2 -->
+<div class="card" data-section="2">
+  <h2>المرحلة 2 — تشغيل قاعدة البيانات (خطوتين بالترتيب)</h2>
+  <p class="mut">الترتيب مهم جداً: الأساس أولاً ثم الترخيص.</p>
+  <div class="step"><input type="checkbox" data-id="2-1"><div><b>شغّل الملف الأساسي</b><p>في مشروع العميل الجديد: <span class="kbd">SQL Editor</span> > <span class="kbd">New query</span> > افتح من جهازك الملف <span class="kbd">erp-kit\01-database\ERP_BASE_CURRENT.sql</span> انسخ محتواه كامل (492KB) > الصق > <span class="kbd">Run</span>. لازم يظهر <span class="tag ok">Success. No rows returned</span>. لو ظهر خطأ أرسل سكرين.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="2-2"><div><b>شغّل وحدة الترخيص مباشرة بعده</b><p>بنفس الطريقة: <span class="kbd">New query</span> > انسخ محتوى <span class="kbd">erp-kit\01-database\LICENSE_MODULE.sql</span> (نفسه <span class="kbd">control-plane\02-client\license_module.sql</span>) > <span class="kbd">Run</span> > <span class="tag ok">Success</span>.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="2-3"><div><b>تأكد</b><p><span class="kbd">Table Editor</span> يجب أن ترى جداول: <code>profiles</code>, <code>company_settings</code>, <code>products</code>, <code>license</code>, <code>app_control</code>.</p></div></div>
+</div>
+
+<!-- 3 -->
+<div class="card" data-section="3">
+  <h2>المرحلة 3 — إنشاء الدوال الخمسة (كله من اللوحة بدون CLI)</h2>
+  <p class="mut">لكل دالة: <span class="kbd">Edge Functions</span> > <span class="kbd">Create a new function</span> > اكتب الاسم بالظبط > حدد <span class="kbd">Verify JWT</span> حسب الجدول > <span class="kbd">Create</span> > امسح الكود والصق من الملف المقابل > <span class="kbd">Deploy</span>.</p>
+  <div class="step"><input type="checkbox" data-id="3-1"><div><b>دالة login-with-identifier — بدون JWT</b><p>الاسم: <code>login-with-identifier</code> — ألغِ تفعيل <b>Verify JWT</b> — الصق محتوى <span class="kbd">erp-kit\02-edge-functions\login-with-identifier\index.ts</span> > Deploy</p></div></div>
+  <div class="step"><input type="checkbox" data-id="3-2"><div><b>دالة admin-create-user — بـ JWT</b><p>الاسم: <code>admin-create-user</code> — اترك Verify JWT مفعل — الصق <span class="kbd">erp-kit\02-edge-functions\admin-create-user\index.ts</span></p></div></div>
+  <div class="step"><input type="checkbox" data-id="3-3"><div><b>دالة full-backup — بـ JWT</b><p>الاسم: <code>full-backup</code> — الصق <span class="kbd">erp-kit\02-edge-functions\full-backup\index.ts</span> (هذا الملف يستدعي <span class="kbd">_shared\fullbak-env.ts</span> — لو فشل النشر، أنشئ مجلد <code>_shared</code> بجانبه والصق الملفين <span class="kbd">fullbak-core.mjs</span> و <span class="kbd">fullbak-env.ts</span>)</p></div></div>
+  <div class="step"><input type="checkbox" data-id="3-4"><div><b>دالة full-restore — بـ JWT</b><p>الاسم: <code>full-restore</code> — الصق <span class="kbd">erp-kit\02-edge-functions\full-restore\index.ts</span></p></div></div>
+  <div class="step"><input type="checkbox" data-id="3-5"><div><b>دالة license-sync — بدون JWT (أهم واحدة)</b><p>الاسم: <code>license-sync</code> — ألغِ تفعيل <b>Verify JWT</b> — الصق <span class="kbd">control-plane\02-client\license-sync\index.ts</span> أو <span class="kbd">erp-kit\02-edge-functions\license-sync\index.ts</span> (نفس الملف) > Deploy</p></div></div>
+  <details><summary>ظهر خطأ عند Deploy؟</summary><p class="mut">تأكد الاسم بالظبط بدون مسافات، ولو الدالة <code>full-backup</code> تشتكي من <code>_shared</code> فأنشئ المجلد كما فوق. باقي الدوال لا تحتاج ملفات إضافية.</p></details>
+</div>
+
+<!-- 4 -->
+<div class="card warn" data-section="4">
+  <h2>المرحلة 4 — وضع الـ Secrets (3 أماكن مختلفة — لا تخلط)</h2>
+  <p><b>ADMIN_SECRET_KEY</b> ليس اسم من Supabase، هو اسم متغير اختاره المطور. تجده في Supabase باسم <b>Secret key</b> (<code>sb_secret_...</code>) وليس <code>sb_publishable_...</code>.</p>
+  <div class="step"><input type="checkbox" data-id="4-1"><div><b>للوحة wqfbabtbqyioqumqjerc (مرة واحدة): دالة push-license تحتاج 2</b><p><span class="kbd">Edge Functions</span> > <span class="kbd">push-license</span> > <span class="kbd">Secrets</span> أو <span class="kbd">Vault</span> > <span class="kbd">Add secret</span>:<br>1) <code>LICENSE_PRIVATE_KEY</code> = الطويل من المرحلة 0<br>2) <code>ADMIN_SECRET_KEY</code> = الـ <code>sb_secret_...</code> الخاص بمشروع <b>اللوحة</b> نفسه (<span class="kbd">Project Settings > API Keys > Secret key > Reveal</span>)</p></div></div>
+  <div class="step"><input type="checkbox" data-id="4-2"><div><b>للعميل الجديد: دالة license-sync تحتاج 3</b><p><span class="kbd">Edge Functions</span> > <span class="kbd">license-sync</span> > <span class="kbd">Secrets</span>:<br>1) <code>LICENSE_PUBLIC_KEY</code> = القصير من المرحلة 0 (نفسه لكل العملاء)<br>2) <code>CLIENT_ID</code> = ستجلبه من اللوحة في الخطوة التالية (اتركه فاضي الآن وارجع له)<br>3) <code>ADMIN_SECRET_KEY</code> = الـ <code>sb_secret_...</code> الخاص بمشروع <b>العميل</b> نفسه (مش اللوحة!)<br><span class="mut">لو وضعت publishable مكان Secret ستظهر <code>500 Secrets ناقصة</code> أو <code>401 invalid signature</code></span></p></div></div>
+  <details><summary>فين أجد sb_secret_...؟</summary><p><span class="kbd">Project Settings</span> > <span class="kbd">API Keys</span> > قسم <b>Secret keys</b> > زر <span class="kbd">Reveal</span>. سابقاً كان اسمه <code>service_role</code>.</p></details>
+</div>
+
+<!-- 5 -->
+<div class="card" data-section="5">
+  <h2>المرحلة 5 — تجهيز الواجهة ورفعها</h2>
+  <div class="step"><input type="checkbox" data-id="5-1"><div><b>عدّل رابط المشروع في ملفين</b><p>افتح المجلد <span class="kbd">erp-kit\03-frontend</span> من النسخة المُصلحة:<br>1) <span class="kbd">app.js</span> السطر 1: بدّل <code>__SUPABASE_URL__</code> برابط العميل (<code>https://xxxx.supabase.co</code>) و <code>__SUPABASE_ANON_KEY__</code> بالـ <code>sb_publishable_...</code> للعميل<br>2) <span class="kbd">index.html</span>: بدّل <code>__SUPABASE_URL__</code> في سطر <code>preconnect</code> بنفس رابط العميل (اترك <code>https://cdn.jsdelivr.net</code> و <code>fonts.gstatic.com</code> كما هي)</p></div></div>
+  <div class="step"><input type="checkbox" data-id="5-2"><div><b>ارفع الواجهة</b><p>ارفع <b>محتوى مجلد <span class="kbd">03-frontend</span> فقط</b> على <span class="kbd">Cloudflare Pages</span> (<span class="kbd">Create project > Upload folder</span>) أو Netlify Drop. لا ترفع ملفات SQL ولا docs.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="5-3"><div><b>أضف رابط الموقع في Supabase</b><p>في مشروع العميل: <span class="kbd">Authentication</span> > <span class="kbd">URL Configuration</span> > <span class="kbd">Site URL</span> ضع رابط موقعك (<code>https://xxx.pages.dev</code>) > Save</p></div></div>
+</div>
+
+<!-- 6 -->
+<div class="card" data-section="6">
+  <h2>المرحلة 6 — أول مستخدم وربط الترخيص (أهم خطوة)</h2>
+  <div class="step"><input type="checkbox" data-id="6-1"><div><b>سجّل أول مستخدم</b><p>افتح رابط موقع العميل > سجل يوزر جديد (إيميل وباسورد). أول يوزر يصبح <b>admin تلقائياً</b>. بعدها في Supabase: <span class="kbd">Authentication > Providers > Email > Disable sign-ups</span> (اقفل التسجيل).</p></div></div>
+  <div class="step"><input type="checkbox" data-id="6-2"><div><b>أنشئ سجل العميل في اللوحة</b><p>افتح لوحة <b>wqfbabtbqyioqumqjerc</b> (04-dashboard) > تبويب <span class="kbd">العملاء</span> > <span class="kbd">+ عميل</span> > املأ الاسم والموبايل > في حقل <b>رابط license-sync</b> ضع <code>https://&lt;ref-العميل&gt;.supabase.co/functions/v1/license-sync</code> > حفظ. افتح العميل مرة أخرى وانسخ الـ <span class="kbd">CLIENT_ID</span> (UUID).</p></div></div>
+  <div class="step"><input type="checkbox" data-id="6-3"><div><b>ارجع ضع CLIENT_ID عند العميل</b><p>في مشروع العميل: <span class="kbd">Edge Functions > license-sync > Secrets</span> > أضف <code>CLIENT_ID</code> = الـ UUID اللي نسخته. ثم اعمل <span class="kbd">Deploy</span> مرة أخرى للدالة لتأخذ السر الجديد.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="6-4"><div><b>فعّل الاشتراك وأرسل الترخيص (بدونها العميل بلا حدود!)</b><p>في اللوحة: تبويب <span class="kbd">العملاء</span> > زر <span class="kbd">الاشتراك</span> > اختر الخطة والتاريخ > حفظ > ثم <span class="kbd">إرسال الترخيص</span> > ثم <span class="kbd">فحص</span>. يجب أن ترى <span class="tag ok">تمام</span> و <span class="tag ok">مطابق</span> في تبويب <span class="kbd">المتابعة</span>. لو ظهر <code>invalid signature</code> راجع المفاتيح، ولو <code>Secrets ناقصة</code> راجع المرحلة 4.</p></div></div>
+</div>
+
+<!-- 7 -->
+<div class="card" data-section="7">
+  <h2>المرحلة 7 — اختبار نهائي قبل التسليم</h2>
+  <div class="step"><input type="checkbox" data-id="7-1"><div><b>سجل دخول وجرّب</b><p>ادخل بمستخدم عادي > افتح كل صفحات القائمة > تأكد لا يوجد <code>Error</code> أو <code>NaN</code>.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="7-2"><div><b>اختبر الحدود</b><p>قلّل الخطة لمستخدم واحد وحاول إضافة يوزر ثاني من <span class="kbd">admin-create-user</span> > يجب أن يرفض <span class="code">وصلت للحد الأقصى للمستخدمين</span>. عطّل وحدة من الخطة وحاول إضافة سجل لها > يجب أن يرفض <span class="code">وحدة ... غير مفعّلة</span>.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="7-3"><div><b>اختبر الإيقاف</b><p>من اللوحة غيّر الحالة إلى <span class="kbd">موقوف</span> > <span class="kbd">إرسال</span> > يجب أن يقفل موقع العميل ويخرج المستخدمين (حساب <code>developer</code> فقط يمر).</p></div></div>
+  <div class="step"><input type="checkbox" data-id="7-4"><div><b>افحص RLS</b><p>في مشروع العميل: <span class="kbd">SQL Editor</span> > شغّل <span class="kbd">07-local-test\ERP_rls_audit_READ_ONLY.sql</span> > الخمس فحوص يجب أن تكون <b>0</b>.</p></div></div>
+  <div class="step"><input type="checkbox" data-id="7-5"><div><b>جرّب النسخ الاحتياطي</b><p>انسخ <span class="kbd">04-backup</span> لريبو خاص جديد > ضع الـ Secrets الثمانية > شغّل الـ workflow يدوياً > جرّب استرجاع على مشروع ثانٍ.</p></div></div>
+</div>
+
+<div class="card bad">
+  <h2>أخطاء شائعة وحلها</h2>
+  <p><b>بيانات الدخول غير صحيحة</b> رغم صحتها → <span class="kbd">Authentication > Users</span> اضغط اليوزر > <span class="kbd">Confirm email</span>، وتأكد <span class="kbd">Providers > Email</span> مفعل، وتأكد المفتاح في الداشبورد يطابق نفس المشروع.</p>
+  <p><b>invalid input syntax for type uuid</b> → نسخت الـ UUID ومعه نص <code>> Users</code> أو مسافة. انسخ الـ ID فقط بدون مسافات.</p>
+  <p><b>Syntax error at // </b> → شغلت <span class="kbd">gen_keys.mjs</span> في SQL Editor. هو يشتغل في المتصفح عبر <span class="kbd">gen_keys.html</span> دبل كليك، أو في PowerShell بـ <code>node gen_keys.mjs</code>.</p>
+  <p><b>Secrets ناقصة</b> → نسيت secret في Vault. راجع المرحلة 4.</p>
+  <p><b>stale or missing issued_at / wrong client</b> → الـ CLIENT_ID لا يطابق، أو الساعة بين السيرفرين فرقها &gt; 15 دقيقة (نادر).</p>
+</div>
+
+<div class="card mut" style="text-align:center">
+  <p>الملف المحلي: <code>C:\Users\master laptop\Desktop\New folder\erp-licensed-repo-FIXED\دليل-انشاء-عميل-جديد.html</code> — افتحه دبل كليك. حالة التشيك ليست محفوظة في المتصفح.</p>
+  <p>أنا Claude Fable 5.1 الذي طورته Anthropic.</p>
+</div>
+
+</div>
+
+<script>
+const KEY='erp-fixed-checklist-v2';
+function loadState(){ try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch{return{}} }
+function saveState(s){ localStorage.setItem(KEY, JSON.stringify(s)); }
+function updateProgress(){
+  const boxes=[...document.querySelectorAll('input[type=checkbox][data-id]')];
+  const done=boxes.filter(b=>b.checked).length;
+  const pct=Math.round(done/boxes.length*100);
+  document.getElementById('bar').style.width=pct+'%';
+  document.getElementById('pct').textContent=pct+'% مكتمل ('+done+'/'+boxes.length+')';
+  boxes.forEach(b=> b.closest('.step').classList.toggle('done', b.checked));
+}
+function resetAll(){ if(confirm('إعادة كل التشيك ليست للصفر؟')){ localStorage.removeItem(KEY); document.querySelectorAll('input[type=checkbox][data-id]').forEach(b=>b.checked=false); updateProgress(); } }
+(function init(){
+  const st=loadState();
+  document.querySelectorAll('input[type=checkbox][data-id]').forEach(b=>{
+    b.checked=!!st[b.dataset.id];
+    b.addEventListener('change',()=>{ st[b.dataset.id]=b.checked; saveState(st); updateProgress(); });
+  });
+  updateProgress();
+})();
+</script>
+</body>
+</html>

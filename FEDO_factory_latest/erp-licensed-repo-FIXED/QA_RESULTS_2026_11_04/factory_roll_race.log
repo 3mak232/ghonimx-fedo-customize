@@ -1,0 +1,1 @@
+PASS two concurrent orders: one issue of 30 succeeds, one rejects, roll and stock remain 10

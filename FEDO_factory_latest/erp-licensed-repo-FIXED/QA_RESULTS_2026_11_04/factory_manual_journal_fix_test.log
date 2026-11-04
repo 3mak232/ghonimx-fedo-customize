@@ -1,0 +1,43 @@
+BEGIN
+INSERT 0 4
+UPDATE 4
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ 92000000-0000-4000-8000-000000000001
+(1 row)
+
+SET
+psql:erp-kit/05-tests/factory_manual_journal_fix_test.sql:35: NOTICE:  PASS: valid manual journal posts balanced lines
+psql:erp-kit/05-tests/factory_manual_journal_fix_test.sql:35: NOTICE:  PASS: unknown account rejected
+psql:erp-kit/05-tests/factory_manual_journal_fix_test.sql:35: NOTICE:  PASS: unbalanced journal rejected
+DO
+              set_config              
+--------------------------------------
+ 92000000-0000-4000-8000-000000000004
+(1 row)
+
+psql:erp-kit/05-tests/factory_manual_journal_fix_test.sql:42: NOTICE:  PASS: accountant can post
+DO
+              set_config              
+--------------------------------------
+ 92000000-0000-4000-8000-000000000002
+(1 row)
+
+psql:erp-kit/05-tests/factory_manual_journal_fix_test.sql:50: NOTICE:  PASS: sales role denied
+DO
+              set_config              
+--------------------------------------
+ 92000000-0000-4000-8000-000000000003
+(1 row)
+
+psql:erp-kit/05-tests/factory_manual_journal_fix_test.sql:58: NOTICE:  PASS: custom accountant without jr denied
+DO
+RESET
+psql:erp-kit/05-tests/factory_manual_journal_fix_test.sql:64: NOTICE:  PASS: anon denied
+DO
+ROLLBACK
