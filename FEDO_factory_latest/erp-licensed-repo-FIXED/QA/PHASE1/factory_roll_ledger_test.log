@@ -1,0 +1,40 @@
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ 94000000-0000-4000-8000-000000000001
+(1 row)
+
+        factory_register_rolls        
+--------------------------------------
+ 94000000-0000-4000-8000-000000000008
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:27: NOTICE:  PASS activation requires reconciliation
+        factory_register_rolls        
+--------------------------------------
+ 94000000-0000-4000-8000-000000000009
+(1 row)
+
+ factory_activate_roll_control 
+-------------------------------
+ 
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:38: NOTICE:  PASS receipt ledger balances and private issue primitive
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:81: NOTICE:  PASS partial consumption waste remainder trace and idempotency
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:81: NOTICE:  PASS insufficient roll rejected
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:81: NOTICE:  PASS conflicting retry rejected
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:81: NOTICE:  PASS untracked stock mutation rejected
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:81: NOTICE:  PASS legacy manufacturing consumption is rejected and rolled back
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:81: NOTICE:  PASS untracked receipt rejected until atomic tracked receipt exists
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:96: NOTICE:  PASS atomic multi-roll credit purchase retry, conflict and FEDO purchase journal
+              set_config              
+--------------------------------------
+ 94000000-0000-4000-8000-000000000002
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_test.sql:104: NOTICE:  PASS sales denied activation and roll ledger visibility

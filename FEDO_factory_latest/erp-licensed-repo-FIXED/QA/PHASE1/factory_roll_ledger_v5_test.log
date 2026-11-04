@@ -1,0 +1,62 @@
+ set_config 
+------------
+ on
+(1 row)
+
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ b0000000-0000-4000-8000-000000000001
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:69: NOTICE:  PASS T0 zero-start tracking refuses non-zero stock
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:79: NOTICE:  PASS T0 tracked product enabled at zero stock
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:104: NOTICE:  PASS T1 atomic roll purchase: 100 units, balanced purchase journal, 2 rolls
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:124: NOTICE:  PASS T1 idempotent purchase retry and conflicting payload rejected
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:157: NOTICE:  PASS T2 activation requires cost calibration, then succeeds
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:171: NOTICE:  PASS T2 roll balances 100 = FEDO stock 100 and value matches avg cost
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:186: NOTICE:  PASS T3 work order creation leaves stock untouched
+          factory_issue_roll          
+--------------------------------------
+ 94099733-3bee-4cb3-8be9-b6db761c6c0b
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:207: NOTICE:  PASS T3 partial consumption 10 + waste 2 from one roll, stock and roll ledger agree (88)
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:217: NOTICE:  PASS T3 repeated request id is idempotent
+     factory_roll_issue_internal      
+--------------------------------------
+ 4700054b-aaea-441f-8900-ca4efd2b3c26
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:233: NOTICE:  PASS T3 over-issue beyond roll remaining rejected
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:246: NOTICE:  PASS T3 same request id with different quantity rejected
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:268: NOTICE:  PASS T4 remainder split creates an independent roll and blocks double splitting
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:283: NOTICE:  PASS T5 roll ledger equals FEDO stock (78.000) and value (780.00)
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:299: NOTICE:  PASS T6 untracked stock mutation rejected
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:315: NOTICE:  PASS T6 roll ledger is append-only
+              set_config              
+--------------------------------------
+ b0000000-0000-4000-8000-000000000003
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:335: NOTICE:  PASS T7 sales role denied roll issue and roll purchase
+              set_config              
+--------------------------------------
+ b0000000-0000-4000-8000-000000000004
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:348: NOTICE:  PASS T7 custom user with stk but no mfg denied roll issue
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:360: NOTICE:  PASS T7 authenticated role cannot write roll ledger tables directly
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:373: NOTICE:  PASS T7 anon denied
+              set_config              
+--------------------------------------
+ b0000000-0000-4000-8000-000000000001
+(1 row)
+
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:390: NOTICE:  PASS T8 direct roll registration after activation blocked
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:407: NOTICE:  PASS T8 negative roll balance blocked by ledger guard
+psql:erp-kit/05-tests/factory_roll_ledger_v5_test.sql:417: NOTICE:  PASS T9 store role keeps mfg permission

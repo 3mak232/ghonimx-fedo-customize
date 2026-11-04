@@ -1,0 +1,62 @@
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ 10000000-0000-4000-8000-000000000001
+(1 row)
+
+psql:erp-kit/05-tests/factory_foundation.sql:31: NOTICE:  PASS: base purchase posts 100
+         factory_link_variant         
+--------------------------------------
+ 6bed8585-2b0c-4555-917b-d74503e7fc99
+(1 row)
+
+psql:erp-kit/05-tests/factory_foundation.sql:33: NOTICE:  PASS: distinct product variant linked
+              set_config              
+--------------------------------------
+ 10000000-0000-4000-8000-000000000002
+(1 row)
+
+        factory_register_rolls        
+--------------------------------------
+ 50000000-0000-4000-8000-000000000001
+(1 row)
+
+        factory_register_rolls        
+--------------------------------------
+ 50000000-0000-4000-8000-000000000001
+(1 row)
+
+psql:erp-kit/05-tests/factory_foundation.sql:49: NOTICE:  PASS: two rolls and retry do not double stock
+psql:erp-kit/05-tests/factory_foundation.sql:49: NOTICE:  PASS: over-allocation rejected
+psql:erp-kit/05-tests/factory_foundation.sql:49: NOTICE:  PASS: conflicting retry rejected
+psql:erp-kit/05-tests/factory_foundation.sql:49: NOTICE:  PASS: direct table writes denied
+              set_config              
+--------------------------------------
+ 10000000-0000-4000-8000-000000000001
+(1 row)
+
+psql:erp-kit/05-tests/factory_foundation.sql:63: NOTICE:  PASS: GRN rolls and duplicate receipt-invoice rejected
+              set_config              
+--------------------------------------
+ 10000000-0000-4000-8000-000000000003
+(1 row)
+
+psql:erp-kit/05-tests/factory_foundation.sql:68: NOTICE:  PASS: sales denied roll RPC and RLS
+              set_config              
+--------------------------------------
+ 10000000-0000-4000-8000-000000000004
+(1 row)
+
+psql:erp-kit/05-tests/factory_foundation.sql:80: NOTICE:  PASS: custom mode without stk denied
+psql:erp-kit/05-tests/factory_foundation.sql:80: NOTICE:  PASS: legacy manufacturing RPCs deny custom user without mfg
+              set_config              
+--------------------------------------
+ 10000000-0000-4000-8000-000000000005
+(1 row)
+
+psql:erp-kit/05-tests/factory_foundation.sql:82: NOTICE:  PASS: accountant can read
+psql:erp-kit/05-tests/factory_foundation.sql:87: NOTICE:  PASS: anonymous denied

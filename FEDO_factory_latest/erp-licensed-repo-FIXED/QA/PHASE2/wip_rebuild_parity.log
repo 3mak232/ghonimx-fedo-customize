@@ -1,0 +1,17 @@
+ set_config 
+------------
+ on
+(1 row)
+
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ e0000000-0000-4000-8000-000000000001
+(1 row)
+
+psql:/tmp/rebuild_parity.sql:32: NOTICE:  rebuild parity: IDENTICAL
+psql:/tmp/rebuild_parity.sql:32: NOTICE:  balanced: t

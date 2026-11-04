@@ -1,0 +1,30 @@
+PASS app.js و factory-v5.js بلا أخطاء تحميل
+PASS شاشة المصنع مسجلة
+PASS مسارات المصنع مضافة للتنقل
+PASS تبويب stock يُنتج واجهة
+PASS تبويب stock بلا نص undefined
+PASS تبويب stock يستخدم دوال التنسيق
+PASS تبويب stock يعرض الرولين
+PASS تبويب issue يُنتج واجهة
+PASS تبويب issue بلا نص undefined
+PASS تبويب issue يستخدم دوال التنسيق
+PASS تبويب issue يعرض أمر تصنيع مفتوح
+PASS تبويب issue يعرض حركة الهالك
+PASS تبويب split يُنتج واجهة
+PASS تبويب split بلا نص undefined
+PASS تبويب split يستخدم دوال التنسيق
+PASS تبويب buy يُنتج واجهة
+PASS تبويب buy بلا نص undefined
+PASS تبويب buy يستخدم دوال التنسيق
+PASS تبويب setup يُنتج واجهة
+PASS تبويب setup بلا نص undefined
+PASS تبويب setup يستخدم دوال التنسيق
+PASS تبويب variants يُنتج واجهة
+PASS تبويب variants بلا نص undefined
+PASS تبويب variants يستخدم دوال التنسيق
+PASS FM.issue يستدعي factory_issue_roll
+PASS FM.issue يمرر الصرف والهالك ضمن نفس الطلب
+PASS مفتاح الطلب ثابت أثناء الفشل/التكرار
+PASS مفتاح الطلب يتجدد بعد النجاح
+
+ALL 28 UI CHECKS PASSED

@@ -1,0 +1,11 @@
+           set_config            
+---------------------------------
+ {"iat":4102444800,"aal":"aal2"}
+(1 row)
+
+              set_config              
+--------------------------------------
+ 91000000-0000-4000-8000-000000000001
+(1 row)
+
+psql:erp-kit/05-tests/factory_legacy_flows.sql:22: NOTICE:  PASS: purchase, sale, sales return, purchase return: stock 14.000; journal 400.00/400.00
